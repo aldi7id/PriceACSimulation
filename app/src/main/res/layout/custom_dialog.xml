@@ -29,6 +29,28 @@
         android:hint="Masukkan Merk AC"
         />
     <TextView
+        android:id="@+id/tv_ukuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ukuran:"/>
+    <EditText
+        android:id="@+id/et_ukuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Masukkan Ukuran AC"/>
+    <TextView
+        android:id="@+id/tv_buatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buatan:"/>
+    <EditText
+        android:id="@+id/et_buatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Masukkan Harga AC"/>
+    <TextView
         android:id="@+id/tv_harga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

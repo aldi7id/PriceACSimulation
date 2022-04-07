@@ -28,6 +28,8 @@ class AcAdapter(private val acList :List<AcEntity>,
         with(holder.binding){
             tvTitle.text = acList[position].title
             tvMerk.text = acList[position].merk
+            tvUkuran.text = acList[position].ukuran
+            tvBuatan.text = acList[position].buatan
             tvHarga.text  = acList[position].harga
             ibEdit.setOnClickListener {
                 editClick(acList[position])

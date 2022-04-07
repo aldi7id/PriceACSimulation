@@ -79,6 +79,8 @@ class HomeFragment : Fragment() {
                     null,
                     bindingDialog.etTitle.text.toString(),
                     bindingDialog.etMerk.text.toString(),
+                    bindingDialog.etUkuran.text.toString(),
+                    bindingDialog.etBuatan.text.toString(),
                     bindingDialog.etHarga.text.toString()
                 )
                 homeViewModel.inserData(ac)
@@ -103,12 +105,16 @@ class HomeFragment : Fragment() {
                 val dialog = builder.create()
                 bindingDialog.etTitle.setText(acEntity.title)
                 bindingDialog.etMerk.setText(acEntity.merk)
+                bindingDialog.etUkuran.setText(acEntity.ukuran)
+                bindingDialog.etBuatan.setText(acEntity.buatan)
                 bindingDialog.etHarga.setText(acEntity.harga)
                 bindingDialog.btnSave.setOnClickListener {
                     val ac = AcEntity(
                         acEntity.userId,
                         bindingDialog.etTitle.text.toString(),
                         bindingDialog.etMerk.text.toString(),
+                        bindingDialog.etUkuran.text.toString(),
+                        bindingDialog.etBuatan.text.toString(),
                         bindingDialog.etHarga.text.toString()
                     )
                     homeViewModel.inserData(ac)

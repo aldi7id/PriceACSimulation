@@ -14,6 +14,10 @@ class AcEntity(
     var title: String,
     @ColumnInfo(name= "merk")
     var merk: String,
+    @ColumnInfo(name= "ukuran")
+    var ukuran: String,
+    @ColumnInfo(name= "buatan")
+    var buatan: String,
     @ColumnInfo(name = "harga")
     var harga: String,
 ): Parcelable
