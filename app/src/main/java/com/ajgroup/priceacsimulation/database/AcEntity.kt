@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
 @Entity(tableName = "list_ac")
 class AcEntity(
     @PrimaryKey(autoGenerate = true)
-    var userId: Int=0,
+    var userId: Int?,
     @ColumnInfo(name = "title")
     var title: String,
     @ColumnInfo(name= "merk")

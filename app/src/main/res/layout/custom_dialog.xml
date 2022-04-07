@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:orientation="vertical">
 <TextView
     android:layout_width="match_parent"
@@ -9,6 +10,12 @@
     android:id="@+id/tv_title"
     android:text="Title"
     />
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Tittle AC"
+        />
     <TextView
         android:id="@+id/tv_merk"
         android:layout_width="match_parent"
@@ -31,5 +38,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Masukkan Harga AC"/>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Data"/>
 
 </LinearLayout>

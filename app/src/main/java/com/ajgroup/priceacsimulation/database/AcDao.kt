@@ -10,11 +10,11 @@ interface AcDao {
     fun getAllAc(): LiveData<List<AcEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addAc(ac: AcEntity):Long
+    suspend fun addAc(ac: AcEntity)
 
     @Update
-    suspend fun updateAc(ac: AcEntity):Int
+    suspend fun updateAc(ac: AcEntity)
 
     @Delete
-    suspend fun deleteAc(ac: AcEntity): Int
+    suspend fun deleteAc(ac: AcEntity)
 }
