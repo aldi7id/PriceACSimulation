@@ -37,6 +37,7 @@
         android:id="@+id/et_harga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:hint="Masukkan Harga AC"/>
     <Button
         android:id="@+id/btn_save"
