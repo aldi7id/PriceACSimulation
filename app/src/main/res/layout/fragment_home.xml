@@ -53,17 +53,6 @@
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
-                   <Button
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:onClick="@{()->homeLayout.backButtonclicked()}"
-            android:text="BACK" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"

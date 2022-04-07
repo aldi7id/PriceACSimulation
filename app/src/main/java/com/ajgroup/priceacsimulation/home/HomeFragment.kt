@@ -52,13 +52,13 @@ class HomeFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
-        homeViewModel.navigateto.observe(viewLifecycleOwner, Observer { hasFinished ->
-            if (hasFinished== true) {
-                val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
-                NavHostFragment.findNavController(this).navigate(action)
-                homeViewModel.doneNavigating()
-            }
-        })
+//        homeViewModel.navigateto.observe(viewLifecycleOwner, Observer { hasFinished ->
+//            if (hasFinished== true) {
+//                val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
+//                NavHostFragment.findNavController(this).navigate(action)
+//                homeViewModel.doneNavigating()
+//            }
+//        })
 
         initRecyclerView()
 
@@ -85,6 +85,9 @@ class HomeFragment : Fragment() {
                 dialog.dismiss()
             }
             dialog.show()
+        }
+        binding.backButton.setOnClickListener {
+
         }
     }
     private fun initRecyclerView() {

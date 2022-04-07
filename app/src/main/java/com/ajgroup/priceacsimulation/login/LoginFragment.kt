@@ -1,5 +1,7 @@
 package com.ajgroup.priceacsimulation.login
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -20,7 +22,16 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
     private lateinit var loginViewModel: LoginViewModel
-
+    private val sharedPrefFile = "kotlinsharedpreference"
+    var sharedPreferences:SharedPreferences? = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        sharedPreferences = requireContext().getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
+        val userNameShared = sharedPreferences?.getString("user_key","")
+        if (userNameShared != ""){
+            navigateUserDetails()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -89,7 +100,11 @@ class LoginFragment : Fragment() {
     }
     private fun navigateUserDetails() {
         Log.i("MYTAG","insidisplayUsersList")
+        val editor: SharedPreferences.Editor = sharedPreferences!!.edit()
+        editor.putString("user_key", binding.userNameTextField.text.toString())
+        editor.apply()
         val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
         NavHostFragment.findNavController(this).navigate(action)
+
     }
 }
