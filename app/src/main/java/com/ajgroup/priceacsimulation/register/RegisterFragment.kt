@@ -1,4 +1,4 @@
-package com.ajgroup.priceacsimulation
+package com.ajgroup.priceacsimulation.register
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
