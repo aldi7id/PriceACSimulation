@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.ajgroup.priceacsimulation.database.RegisterRepository
 import java.lang.IllegalArgumentException
 
-class RegiterViewModelFactory(
+class RegisterViewModelFactory(
     private  val repository: RegisterRepository,
     private val application: Application
 ): ViewModelProvider.Factory

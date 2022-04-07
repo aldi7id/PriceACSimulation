@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.ajgroup.priceacsimulation.register.RegisterFragment">
-<!--    <data>-->
-<!--        <variable-->
-<!--            name="myViewModel"-->
-<!--            type="com.example.mydatabaseapp.register.RegisterViewModel" />-->
-<!--    </data>-->
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.ajgroup.priceacsimulation.register.RegisterViewModel" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
