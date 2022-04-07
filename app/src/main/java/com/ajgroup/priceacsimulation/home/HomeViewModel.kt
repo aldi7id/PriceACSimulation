@@ -7,7 +7,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.ajgroup.priceacsimulation.database.AcEntity
 import com.ajgroup.priceacsimulation.database.AcRepository
-import com.ajgroup.priceacsimulation.database.RegisterRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -26,23 +25,23 @@ class HomeViewModel (private val repository: AcRepository, application: Applicat
         val navigateto: LiveData<Boolean>
             get() = _navigateto
 
-        fun doneNavigating(){
-            _navigateto.value=false
-        }
+//        fun doneNavigating(){
+//            _navigateto.value=false
+//        }
 
-        fun backButtonclicked(){
-            _navigateto.value = true
-        }
+//        fun backButtonclicked(){
+//            _navigateto.value = true
+//        }
         fun inserData(ac: AcEntity){
             uiScope.launch {
             repository.insert(ac)
             }
         }
-        fun editData(ac: AcEntity){
-            uiScope.launch {
-                repository.edit(ac)
-            }
-        }
+//        fun editData(ac: AcEntity){
+//            uiScope.launch {
+//                repository.edit(ac)
+//            }
+//        }
         fun deleteData(ac: AcEntity){
             uiScope.launch {
                 repository.delete(ac)

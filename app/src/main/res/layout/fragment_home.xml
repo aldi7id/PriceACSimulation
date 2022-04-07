@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:paddingTop="16dp"
-                android:text="List Of User"
+                android:text="Daftar Harga AC Split"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
