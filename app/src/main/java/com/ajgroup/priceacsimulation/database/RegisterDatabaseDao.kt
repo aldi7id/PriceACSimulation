@@ -5,7 +5,7 @@ import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface RegisterDao{
+interface RegisterDatabaseDao{
     @Insert
     suspend fun insert(register: RegisterEntity)
 
