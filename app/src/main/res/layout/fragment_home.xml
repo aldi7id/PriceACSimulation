@@ -8,22 +8,15 @@
             name="homeLayout"
             type="com.ajgroup.priceacsimulation.home.HomeViewModel" />
     </data>
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:layout_height="match_parent">
+
     <!-- TODO: Update blank fragment layout -->
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:onClick="@{()->homeLayout.backButtonclicked()}"
-            android:text="BACK" />
 
         <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="579dp"
@@ -59,7 +52,28 @@
                 tools:layout_editor_absoluteY="53dp">
 
             </androidx.recyclerview.widget.RecyclerView>
-
         </LinearLayout>
-    </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:contentDescription="add"
+                android:src="@drawable/ic_add"/>
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="@{()->homeLayout.backButtonclicked()}"
+            android:text="BACK" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

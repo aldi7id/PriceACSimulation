@@ -21,17 +21,17 @@ class MyRecycleViewAdapter(private val usersList :List<RegisterEntity>): Recycle
 
     override fun onBindViewHolder(holder: MyviewHolder, position: Int) {
         holder.bind(usersList[position])
-
     }
 
     class MyviewHolder(private val binding: ListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(user: RegisterEntity) {
-            binding.FirstNameTextView.text = user.firstName
-            binding.secondNameTextView.text = user.lastName
-            binding.userTextField.text = user.userName
+            with(binding){
+            FirstNameTextView.text = user.firstName
+            secondNameTextView.text = user.lastName
+            userTextField.text = user.userName
+            }
         }
-
     }
 }
