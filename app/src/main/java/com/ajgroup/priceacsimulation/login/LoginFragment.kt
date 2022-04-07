@@ -105,6 +105,6 @@ class LoginFragment : Fragment() {
         editor.apply()
         val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
         NavHostFragment.findNavController(this).navigate(action)
-
+        Toast.makeText(context, "Login Sukses", Toast.LENGTH_SHORT).show()
     }
 }

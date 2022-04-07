@@ -77,5 +77,6 @@ class RegisterFragment : Fragment() {
         Log.i("MYTAG","insidisplayUsersList")
         val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
         NavHostFragment.findNavController(this).navigate(action)
+        Toast.makeText(context, "Registrasi Berhasil", Toast.LENGTH_SHORT).show()
     }
 }
