@@ -20,7 +20,7 @@ class RegisterViewModel(private val repository: RegisterRepository, application:
         init {
             Log.i("MYTAG", "init")
         }
-    private var userdata: String? = null
+    //private var userdata: String? = null
     var userDetailsLiveData = MutableLiveData<Array<RegisterEntity>>()
 
     @Bindable

@@ -1,18 +1,10 @@
 package com.ajgroup.priceacsimulation.home
 
-import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.ajgroup.priceacsimulation.MainActivity
 import com.ajgroup.priceacsimulation.database.AcEntity
-import com.ajgroup.priceacsimulation.database.RegisterDatabase
-import com.ajgroup.priceacsimulation.database.RegisterEntity
-import com.ajgroup.priceacsimulation.databinding.CustomDialogBinding
 import com.ajgroup.priceacsimulation.databinding.ListItemBinding
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
 
 class AcAdapter(private val acList :List<AcEntity>,
                 val editClick:(AcEntity)-> Unit,
@@ -27,10 +19,10 @@ class AcAdapter(private val acList :List<AcEntity>,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.binding){
             tvTitle.text = acList[position].title
-            tvMerk.text = acList[position].merk
-            tvUkuran.text = acList[position].ukuran
-            tvBuatan.text = acList[position].buatan
-            tvHarga.text  = acList[position].harga
+            tvMerk.text = "Merk:"+acList[position].merk
+            tvUkuran.text = "Ukuran: "+acList[position].ukuran
+            tvBuatan.text = "Buatan: " + acList[position].buatan
+            tvHarga.text  = "Harga: Rp. " + acList[position].harga
             ibEdit.setOnClickListener {
                 editClick(acList[position])
             }

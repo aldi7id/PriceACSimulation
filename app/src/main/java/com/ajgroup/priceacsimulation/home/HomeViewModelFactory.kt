@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.ajgroup.priceacsimulation.database.AcRepository
-import com.ajgroup.priceacsimulation.database.RegisterRepository
 import java.lang.IllegalArgumentException
 
 class HomeViewModelFactory(

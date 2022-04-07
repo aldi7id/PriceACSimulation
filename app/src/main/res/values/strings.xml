@@ -2,4 +2,14 @@
     <string name="app_name">Price AC Simulation</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="masukkan_tittle_ac">Masukkan Tittle AC</string>
+    <string name="title">Title</string>
+    <string name="harga">Harga:</string>
+    <string name="masukkan_harga_ac">Masukkan Harga AC</string>
+    <string name="buatan">Buatan:</string>
+    <string name="masukkan_ukuran_ac">Masukkan Ukuran AC</string>
+    <string name="ukuran">Ukuran:</string>
+    <string name="masukkan_merk_ac">Masukkan Merk AC</string>
+    <string name="merk">Merk:</string>
+    <string name="save_data">Save Data</string>
 </resources>

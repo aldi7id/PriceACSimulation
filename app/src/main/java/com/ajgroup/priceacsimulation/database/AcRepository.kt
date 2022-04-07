@@ -1,6 +1,5 @@
 package com.ajgroup.priceacsimulation.database
 
-import android.util.Log
 
 class AcRepository(private val dao: AcDao) {
 
@@ -12,8 +11,8 @@ class AcRepository(private val dao: AcDao) {
     suspend fun delete(ac: AcEntity){
         return dao.deleteAc(ac)
     }
-    suspend fun edit(ac: AcEntity){
-        return dao.updateAc(ac)
-    }
+//    suspend fun edit(ac: AcEntity){
+//        return dao.updateAc(ac)
+//    }
 
 }

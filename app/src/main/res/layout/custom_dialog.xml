@@ -4,67 +4,75 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:orientation="vertical">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/tv_title"
-    android:text="Title"
-    />
-    <EditText
-        android:id="@+id/et_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Tittle AC"
-        />
+
     <TextView
         android:id="@+id/tv_merk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Merk:"
+        android:text="@string/merk"
         />
     <EditText
+        android:inputType="text"
+        android:autofillHints="none"
         android:id="@+id/et_merk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan Merk AC"
+        android:hint="@string/masukkan_merk_ac"
         />
     <TextView
         android:id="@+id/tv_ukuran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ukuran:"/>
+        android:text="@string/ukuran"/>
     <EditText
         android:id="@+id/et_ukuran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="Masukkan Ukuran AC"/>
+        android:autofillHints="none"
+        android:hint="@string/masukkan_ukuran_ac"/>
     <TextView
         android:id="@+id/tv_buatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buatan:"/>
+        android:text="@string/buatan"/>
     <EditText
         android:id="@+id/et_buatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="Masukkan Harga AC"/>
+        android:autofillHints="none"
+        android:hint="@string/masukkan_harga_ac"/>
     <TextView
         android:id="@+id/tv_harga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Harga:"/>
+        android:text="@string/harga"/>
     <EditText
         android:id="@+id/et_harga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="Masukkan Harga AC"/>
+        android:autofillHints="none"
+        android:hint="@string/masukkan_harga_ac"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title"
+        android:text="@string/title"
+        />
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/masukkan_tittle_ac"
+        android:inputType="text"
+        android:autofillHints="none"
+        />
     <Button
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save Data"/>
+        android:text="@string/save_data"/>
 
 </LinearLayout>

@@ -9,20 +9,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ajgroup.priceacsimulation.R
 import com.ajgroup.priceacsimulation.database.AcEntity
 import com.ajgroup.priceacsimulation.database.AcRepository
 import com.ajgroup.priceacsimulation.database.RegisterDatabase
-import com.ajgroup.priceacsimulation.database.RegisterRepository
 import com.ajgroup.priceacsimulation.databinding.CustomDialogBinding
 import com.ajgroup.priceacsimulation.databinding.FragmentHomeBinding
-import com.ajgroup.priceacsimulation.databinding.FragmentRegisterBinding
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
@@ -124,9 +118,7 @@ class HomeFragment : Fragment() {
                 dialog.show()
             },{
                 val dialogWithButton = AlertDialog.Builder(context)
-                dialogWithButton.setTitle("Dialog Dengan Button")
-                dialogWithButton.setMessage("Dialog Dengan Button untuk berbagai Aksi")
-                dialogWithButton.setIcon(R.mipmap.ic_launcher_round)
+                dialogWithButton.setTitle("Apakah Anda Yakin Ingin Menghapus?")
 
                 dialogWithButton.setCancelable(false)
                 dialogWithButton.setPositiveButton("Yakin",
@@ -135,7 +127,7 @@ class HomeFragment : Fragment() {
                         homeViewModel.deleteData(it)
                         Toast.makeText(context, "Data Berhasil di Delete", Toast.LENGTH_SHORT).show()
                     })
-                dialogWithButton.setNegativeButton("Batal",
+                dialogWithButton.setNeutralButton("Batal",
                     DialogInterface.OnClickListener {
                             dialogInterface, i ->
                         Toast.makeText(context, "Batal Menghapus Data", Toast.LENGTH_SHORT).show() })

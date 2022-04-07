@@ -2,7 +2,6 @@ package com.ajgroup.priceacsimulation.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface AcDao {
