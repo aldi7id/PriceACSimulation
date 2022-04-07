@@ -6,11 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ajgroup.priceacsimulation.HomeFragmentDirections
+import com.ajgroup.priceacsimulation.R
 import com.ajgroup.priceacsimulation.database.RegisterDatabase
 import com.ajgroup.priceacsimulation.database.RegisterRepository
 import com.ajgroup.priceacsimulation.databinding.FragmentHomeBinding
@@ -18,22 +19,21 @@ import com.ajgroup.priceacsimulation.databinding.FragmentRegisterBinding
 
 class HomeFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
+//    private var _binding: FragmentHomeBinding? = null
+//    private val binding get() = _binding!!
+private lateinit var binding: FragmentHomeBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentHomeBinding.inflate(inflater,container,false)
+       // _binding = FragmentHomeBinding.inflate(inflater,container,false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_home, container, false
+        )
         val application = requireNotNull(this.activity).application
 
         val dao = RegisterDatabase.getInstance(application).registerDatabaseDao

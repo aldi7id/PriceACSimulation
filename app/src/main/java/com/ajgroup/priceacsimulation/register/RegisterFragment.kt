@@ -7,10 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
-import com.ajgroup.priceacsimulation.RegisterFragmentDirections
+import com.ajgroup.priceacsimulation.R
 import com.ajgroup.priceacsimulation.database.RegisterDatabase
 import com.ajgroup.priceacsimulation.database.RegisterRepository
 import com.ajgroup.priceacsimulation.databinding.FragmentRegisterBinding
@@ -18,22 +19,20 @@ import com.ajgroup.priceacsimulation.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
     private lateinit var registerViewModel: RegisterViewModel
-    private var _binding: FragmentRegisterBinding? = null
-    private val binding get() = _binding!!
+//    private var _binding: FragmentRegisterBinding? = null
+//    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentRegisterBinding.inflate(inflater,container,false)
+        //_binding = FragmentRegisterBinding.inflate(inflater,container,false)
+        val binding: FragmentRegisterBinding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_register, container, false
+        )
         val application = requireNotNull(this.activity).application
 
         val dao = RegisterDatabase.getInstance(application).registerDatabaseDao
