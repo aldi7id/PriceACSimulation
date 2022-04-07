@@ -1,5 +1,6 @@
 package com.ajgroup.priceacsimulation.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -8,6 +9,9 @@ import androidx.room.Query
 interface RegisterDatabaseDao{
     @Insert
     suspend fun insert(register: RegisterEntity)
+
+    @Query("SELECT * FROM Register_users_table ORDER BY userId DESC")
+    fun getAllUsers(): LiveData<List<RegisterEntity>>
 
     @Query("DELETE FROM Register_users_table")
     suspend fun deleteAll(): Int
