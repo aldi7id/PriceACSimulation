@@ -19,7 +19,7 @@ class AcAdapter(private val acList :List<AcEntity>,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.binding){
             tvTitle.text = acList[position].title
-            tvMerk.text = "Merk:"+acList[position].merk
+            tvMerk.text = "Merk: "+acList[position].merk
             tvUkuran.text = "Ukuran: "+acList[position].ukuran
             tvBuatan.text = "Buatan: " + acList[position].buatan
             tvHarga.text  = "Harga: Rp. " + acList[position].harga
