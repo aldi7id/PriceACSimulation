@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.ajgroup.priceacsimulation.login.LoginFragment">
 
-<!--    <data>-->
-<!--        <variable-->
-<!--            name=""-->
-<!--            type="" />-->
-<!--    </data>-->
+    <data>
+        <variable
+            name="myLoginViewModel"
+            type="com.ajgroup.priceacsimulation.login.LoginViewModel" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
