@@ -3,6 +3,7 @@ package com.ajgroup.priceacsimulation.login
 import android.app.Application
 import androidx.databinding.Observable
 import android.util.Log
+import androidx.databinding.Bindable
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -16,9 +17,9 @@ import kotlinx.coroutines.launch
 class LoginViewModel(private val repository: RegisterRepository, application: Application):
     AndroidViewModel(application), Observable {
         val users = repository.users
-
+    @Bindable
     val inputUsername = MutableLiveData<String?>()
-
+    @Bindable
     val inputPassword = MutableLiveData<String?>()
 
     private val viewModelJob = Job()
