@@ -19,9 +19,9 @@ import com.ajgroup.priceacsimulation.databinding.FragmentRegisterBinding
 
 class HomeFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
-//    private var _binding: FragmentHomeBinding? = null
-//    private val binding get() = _binding!!
-private lateinit var binding: FragmentHomeBinding
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
+//private lateinit var binding: FragmentHomeBinding
 
 
     override fun onCreateView(
@@ -29,11 +29,11 @@ private lateinit var binding: FragmentHomeBinding
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-       // _binding = FragmentHomeBinding.inflate(inflater,container,false)
-        binding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_home, container, false
-        )
+        _binding = FragmentHomeBinding.inflate(inflater,container,false)
+//        binding = DataBindingUtil.inflate(
+//            inflater,
+//            R.layout.fragment_home, container, false
+//        )
         val application = requireNotNull(this.activity).application
 
         val dao = RegisterDatabase.getInstance(application).registerDatabaseDao

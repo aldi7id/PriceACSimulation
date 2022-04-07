@@ -7,11 +7,12 @@ import com.ajgroup.priceacsimulation.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-//    private var _binding: ActivityMainBinding? = null
-//    private val binding get() = _binding!!
+    private var _binding: ActivityMainBinding? = null
+    private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
-
+        //val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }

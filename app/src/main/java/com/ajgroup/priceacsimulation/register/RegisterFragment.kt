@@ -19,8 +19,8 @@ import com.ajgroup.priceacsimulation.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
     private lateinit var registerViewModel: RegisterViewModel
-//    private var _binding: FragmentRegisterBinding? = null
-//    private val binding get() = _binding!!
+    private var _binding: FragmentRegisterBinding? = null
+    private val binding get() = _binding!!
 
 
     override fun onCreateView(
@@ -28,11 +28,11 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        //_binding = FragmentRegisterBinding.inflate(inflater,container,false)
-        val binding: FragmentRegisterBinding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_register, container, false
-        )
+        _binding = FragmentRegisterBinding.inflate(inflater,container,false)
+//        val binding: FragmentRegisterBinding = DataBindingUtil.inflate(
+//            inflater,
+//            R.layout.fragment_register, container, false
+//        )
         val application = requireNotNull(this.activity).application
 
         val dao = RegisterDatabase.getInstance(application).registerDatabaseDao

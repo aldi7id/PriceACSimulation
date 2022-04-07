@@ -17,8 +17,8 @@ import com.ajgroup.priceacsimulation.database.RegisterRepository
 import com.ajgroup.priceacsimulation.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
-//    private var _binding: FragmentLoginBinding? = null
-//    private val binding get() = _binding!!
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
     private lateinit var loginViewModel: LoginViewModel
 
 
@@ -27,12 +27,12 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        //_binding = FragmentLoginBinding.inflate(inflater, container,false)
+        _binding = FragmentLoginBinding.inflate(inflater, container,false)
         //return binding.root
-        val binding: FragmentLoginBinding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_login, container, false
-        )
+//        val binding: FragmentLoginBinding = DataBindingUtil.inflate(
+//            inflater,
+//            R.layout.fragment_login, container, false
+//        )
         val application = requireNotNull(this.activity).application
 
         val dao = RegisterDatabase.getInstance(application).registerDatabaseDao
